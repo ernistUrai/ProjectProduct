@@ -1,0 +1,48 @@
+GET http://127.0.0.1:8000/api/products/
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:8000/api/products/1/
+Content-Type: application/json
+
+###
+GET   http://127.0.0.1:8000/api/cart/7/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzNzY0NzMxLCJpYXQiOjE3MzM3NjQ0MzEsImp0aSI6IjNmMWMwNWVjNjk1YzRlZGI4N2Q3OWEzZDliYzUyOTBmIiwidXNlcl9pZCI6NH0.j9Gl77yMofHmLi4NguT1Jg-c7ZqaiFSSkui-A-9FLMM
+
+{
+    "user": "1",
+    "product": [2],
+    "quantity": 1
+}
+
+###
+DELETE    http://127.0.0.1:8000/api/cart/2/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzNzYzNDExLCJpYXQiOjE3MzM3NjMxMTEsImp0aSI6IjAxMDU4ZGVlNmI0NTRhNWY4OTY2NzU4YjgxYmM4ZmUxIiwidXNlcl9pZCI6NH0.80A-PBLdoT8ujC85pQrDBkxmbUuAMK-Lh5e8VtIK_GM
+
+
+###
+GET http://127.0.0.1:8000/api/orders/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzNzY1MDE4LCJpYXQiOjE3MzM3NjU0OTgsImp0aSI6IjU3ZWM5NjMxMGIwMjQ0ZGRiZWM2MWQ0NDM5YzAyM2EzIiwidXNlcl9pZCI6NH0.A8EU8BoBLi00tn0vpLEyQGjOUqrj9KdZtaozUAn2itk      
+
+###
+GET http://127.0.0.1:8000/api/orders/1/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzNzY2MjY4LCJpYXQiOjE3MzM3NjU5NjgsImp0aSI6Ijg0YzcxYTNmYjcwNjQ2OTk5YjQwMDkxODY3YTY1MGFiIiwidXNlcl9pZCI6NH0.opYBGoH0uEqoPCX3VW6FuuRNXs3dAmmCff-iDr46W1k
+
+{
+    "user": 1,
+    "cart": 3,
+    "delivery_address": "Kyrgyzstan",
+    "total_price": 9990,
+    "payment_status": "Наличными"
+
+}
+
+###
+
+GET http://127.0.0.1:8000/api/products/?name=Nike
+Content-Type: application/json
+

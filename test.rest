@@ -1,0 +1,20 @@
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username": "usertest",
+    "email": "test@test.com",
+    "password": "123456",
+    "password2": "123456"
+}
+
+###
+POST http://127.0.0.1:8000/api/token/login/
+Content-Type: application/json
+
+{
+    "username": "usertest",
+    "password": "123456"
+}
+
+###
